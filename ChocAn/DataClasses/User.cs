@@ -25,10 +25,11 @@ namespace ChocAn.DataClasses
 
         public void Display()
         {
-            foreach (string field in _data)
-            {
-                Console.WriteLine(field);
-            }
+
+            Console.WriteLine($" ID: {_data[1]}");
+            Console.WriteLine($" {_data[0]}");
+            Console.WriteLine($" {_data[2]}");
+            Console.WriteLine($" {_data[3]}, {_data[4]} {_data[5]}");
         }
 
         public string[] GetAll()

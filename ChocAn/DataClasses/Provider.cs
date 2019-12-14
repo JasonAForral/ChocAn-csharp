@@ -6,11 +6,12 @@ namespace ChocAn.DataClasses
     public class Provider : User
     {
         private readonly List<string> services;
+        public int Count => USER_SIZE + services.Count;
 
         public Provider(params string[] args)
             : base(args)
         {
-
+            services = new List<string>();
             for (int i = USER_SIZE; i < args.Length; ++i)
             {
                 services.Add(args[i]);
@@ -24,15 +25,15 @@ namespace ChocAn.DataClasses
             Console.WriteLine("Services:");
             foreach (string service in services)
             {
-                Console.WriteLine(service);
+                Console.WriteLine($" {service}");
             }
         }
 
         public override string this[int i]
         {
             get {
-                if (i > USER_SIZE + services.Count)
-                    throw new IndexOutOfRangeException($"Provider only has 0 to {USER_SIZE + services.Count}");
+                if (i >= USER_SIZE + services.Count)
+                    throw new IndexOutOfRangeException($"This Provider only has 0 to {USER_SIZE + services.Count}");
                 return (i < USER_SIZE) ? base[i] : services[i - USER_SIZE];
             }
             set
@@ -42,17 +43,15 @@ namespace ChocAn.DataClasses
                 {
                     base[i] = value;
                 }
-                else if (i == USER_SIZE)
+                else if (i < USER_SIZE + services.Count)
                 {
-                    IsEqualToValid(value);
+                    services[i - USER_SIZE] = value;
                 }
                 else
                 {
-                    throw new IndexOutOfRangeException($"Member only has 0 to {USER_SIZE}");
+                    throw new IndexOutOfRangeException($"Provider only has 0 to {USER_SIZE + services.Count}");
                 }
             }
         }
-
-        private static bool IsEqualToValid(string value) => value.Equals("valid", StringComparison.OrdinalIgnoreCase);
     }
 }

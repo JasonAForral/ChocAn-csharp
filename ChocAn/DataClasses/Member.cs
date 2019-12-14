@@ -18,7 +18,7 @@ namespace ChocAn.DataClasses
         {
             Console.WriteLine("Member Information:");
             base.Display();
-            Console.WriteLine(Valid ? "Valid" : "Suspended");
+            Console.WriteLine(" Status: {0}", Valid ? "Valid" : "Suspended");
         }
 
         public override string this[int i]

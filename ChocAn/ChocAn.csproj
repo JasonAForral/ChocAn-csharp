@@ -5,27 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="obj\Debug\netcoreapp3.1\ChocAn.AssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="obj\ChocAn.csproj.nuget.dgspec.json" />
-    <Content Include="obj\Debug\netcoreapp3.1\ChocAn.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\project.assets.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="obj\ChocAn.csproj.nuget.cache" />
-    <None Include="obj\ChocAn.csproj.nuget.g.props" />
-    <None Include="obj\ChocAn.csproj.nuget.g.targets" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.assets.cache" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.csprojAssemblyReference.cache" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.dll" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.exe" />
-    <None Include="obj\Debug\netcoreapp3.1\ChocAn.pdb" />
-  </ItemGroup>
-
 </Project>

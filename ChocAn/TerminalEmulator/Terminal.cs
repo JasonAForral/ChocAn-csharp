@@ -30,11 +30,12 @@ namespace ChocAn.TerminalEmulator
             ConsoleKeyInfo consoleKeyInfo;
             do
             {
-                Console.WriteLine("\nCHOOOSE!!!" +
-                    "\n 1 - a" +
-                    "\n 2 - b" +
-                    "\n 3 - seven"
-                    );
+                Console.Write(@"
+CHOOOSE!!!
+ 1 - a
+ 2 - b
+ 3 - seven
+");
                 BreadcrumbPrompt();
                 consoleKeyInfo = Console.ReadKey();
                 Console.WriteLine();

@@ -1,4 +1,5 @@
 ﻿using System;
+using ChocAn.Manager;
 using ChocAn.TerminalEmulator;
 
 namespace ChocAn
@@ -8,7 +9,7 @@ namespace ChocAn
         static void Main()
         {
             Console.WriteLine("Hello World!");
-            new Terminal().Start();
+            new Terminal(new ChocAnManager()).Start();
         }
     }
 }

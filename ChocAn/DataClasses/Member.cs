@@ -23,10 +23,11 @@ namespace ChocAn.DataClasses
 
         public override string this[int i]
         {
-            get {
-                if (i > USER_SIZE)
-                    throw new IndexOutOfRangeException($"Member only has 0 to {USER_SIZE}");
-                return (i < USER_SIZE) ? base[i] : (Valid ? "Valid" : "Suspended");
+            get
+            {
+                if (i <= USER_SIZE)
+                    return (i < USER_SIZE) ? base[i] : (Valid ? "Valid" : "Suspended");
+                throw new IndexOutOfRangeException($"Member only has 0 to {USER_SIZE}");
             }
             set
             {
